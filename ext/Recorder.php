@@ -388,7 +388,7 @@ EOF;
         $this->slides = [];
         $this->timeStamps = [];
 
-        $this->dir = codecept_output_dir() . "record_{$this->seed}_{$this->getTestName($e)}";
+		$this->dir = codecept_output_dir() . date('Y-m-d_H-i') . "_{$this->getTestName($e)}";
         $testPath = codecept_relative_path(Descriptor::getTestFullName($e->getTest()));
 
         try {
